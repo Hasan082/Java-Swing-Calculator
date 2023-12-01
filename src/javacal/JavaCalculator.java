@@ -19,8 +19,9 @@ public final class JavaCalculator extends javax.swing.JFrame {
     
     
     
-    public void multiCharecter(){
-        
+    private void btnClickedGetText(String digit) {
+        String txt = ResultField.getText();
+        ResultField.setText(txt + digit);
     }
   
     @SuppressWarnings("unchecked")
@@ -574,7 +575,7 @@ public final class JavaCalculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Jbtn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_1ActionPerformed
-       ResultField.setText("1");
+       btnClickedGetText("1");
     }//GEN-LAST:event_Jbtn_1ActionPerformed
 
     private void ResultFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResultFieldActionPerformed
@@ -582,35 +583,35 @@ public final class JavaCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_ResultFieldActionPerformed
 
     private void Jbtn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_3ActionPerformed
-        ResultField.setText("3");
+        btnClickedGetText("3");
     }//GEN-LAST:event_Jbtn_3ActionPerformed
 
     private void Jbtn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_4ActionPerformed
-        ResultField.setText("4");
+        btnClickedGetText("4");
     }//GEN-LAST:event_Jbtn_4ActionPerformed
 
     private void Jbtn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_5ActionPerformed
-        ResultField.setText("5");
+        btnClickedGetText("5");
     }//GEN-LAST:event_Jbtn_5ActionPerformed
 
     private void Jbtn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_6ActionPerformed
-        ResultField.setText("6");
+        btnClickedGetText("6");
     }//GEN-LAST:event_Jbtn_6ActionPerformed
 
     private void Jbtn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_7ActionPerformed
-        ResultField.setText("7");
+        btnClickedGetText("7");
     }//GEN-LAST:event_Jbtn_7ActionPerformed
 
     private void Jbtn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_8ActionPerformed
-        ResultField.setText("8");
+        btnClickedGetText("8");
     }//GEN-LAST:event_Jbtn_8ActionPerformed
 
     private void Jbtn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_9ActionPerformed
-        ResultField.setText("9");
+        btnClickedGetText("9");
     }//GEN-LAST:event_Jbtn_9ActionPerformed
 
     private void Jbtn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_0ActionPerformed
-        ResultField.setText("0");
+        btnClickedGetText("0");
     }//GEN-LAST:event_Jbtn_0ActionPerformed
 
     private void JClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JClearActionPerformed
@@ -626,6 +627,7 @@ public final class JavaCalculator extends javax.swing.JFrame {
         String a = ResultField.getText();
         sum += Double.parseDouble(a);
         operator = '+';
+        ResultField.setText("");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void JEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JEqualActionPerformed
@@ -648,12 +650,11 @@ public final class JavaCalculator extends javax.swing.JFrame {
         }
         
         if(b != 0){
-            DecimalFormat dcm = new DecimalFormat("0.00");
+            DecimalFormat dcm = new DecimalFormat("0.0");
             ResultField.setText(String.valueOf(dcm.format(sum)));
         }else {
             ResultField.setText(err);
         }
-        
         
     }//GEN-LAST:event_JEqualActionPerformed
 
@@ -661,18 +662,21 @@ public final class JavaCalculator extends javax.swing.JFrame {
         String a = ResultField.getText();
         sum += Double.parseDouble(a);
         operator = '-';
+        ResultField.setText("");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         String a = ResultField.getText();
         sum += Double.parseDouble(a);
         operator = '*';
+        ResultField.setText("");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         String a = ResultField.getText();
         sum += Double.parseDouble(a);
         operator = '/';
+        ResultField.setText("");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     
