@@ -15,6 +15,13 @@ public final class JavaCalculator extends javax.swing.JFrame {
     
     char operator;
     double sum = 0;
+    
+    
+    
+    
+    public void multiCharecter(){
+        
+    }
   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
